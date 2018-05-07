@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1055.2" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Visualization View Controller-->
         <scene sceneID="i5u-rM-Fca">
             <objects>
-                <viewController id="0N6-Uw-cPf" sceneMemberID="viewController">
+                <viewController id="0N6-Uw-cPf" customClass="VisualizationViewController" customModule="SortsAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ztl-i9-48o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="234" y="117"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Animation Table View Controller-->
         <scene sceneID="M54-Mx-ZSj">
             <objects>
-                <tableViewController id="p75-qi-bGV" sceneMemberID="viewController">
+                <tableViewController id="p75-qi-bGV" customClass="AnimationTableViewController" customModule="SortsAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ogs-Cu-ZFL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="501"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

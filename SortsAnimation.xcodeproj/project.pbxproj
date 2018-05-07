@@ -12,6 +12,8 @@
 		F220B31620A04BA70067C705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F220B31420A04BA70067C705 /* Main.storyboard */; };
 		F220B31820A04BB20067C705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F220B31720A04BB20067C705 /* Assets.xcassets */; };
 		F220B31B20A04BB20067C705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F220B31920A04BB20067C705 /* LaunchScreen.storyboard */; };
+		F220B32420A057860067C705 /* VisualizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32320A057860067C705 /* VisualizationViewController.swift */; };
+		F220B32620A057A10067C705 /* AnimationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32520A057A10067C705 /* AnimationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F220B31720A04BB20067C705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F220B31A20A04BB20067C705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F220B31C20A04BB20067C705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F220B32320A057860067C705 /* VisualizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewController.swift; sourceTree = "<group>"; };
+		F220B32520A057A10067C705 /* AnimationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,7 @@
 		F220B30F20A04BA70067C705 /* SortsAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				F220B31220A04BA70067C705 /* StartingViewController.swift */,
+				F220B32720A057A70067C705 /* ViewControllers */,
 				F220B31420A04BA70067C705 /* Main.storyboard */,
 				F220B31C20A04BB20067C705 /* Info.plist */,
 				F220B32220A04BC30067C705 /* Supporting Files */,
@@ -70,6 +74,16 @@
 				F220B31920A04BB20067C705 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F220B32720A057A70067C705 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F220B31220A04BA70067C705 /* StartingViewController.swift */,
+				F220B32320A057860067C705 /* VisualizationViewController.swift */,
+				F220B32520A057A10067C705 /* AnimationTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F220B32620A057A10067C705 /* AnimationTableViewController.swift in Sources */,
+				F220B32420A057860067C705 /* VisualizationViewController.swift in Sources */,
 				F220B31320A04BA70067C705 /* StartingViewController.swift in Sources */,
 				F220B31120A04BA70067C705 /* AppDelegate.swift in Sources */,
 			);
