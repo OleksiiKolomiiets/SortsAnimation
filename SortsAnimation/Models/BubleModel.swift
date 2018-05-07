@@ -16,6 +16,7 @@ class BubbleModel: SortModelProtocol {
             for index2 in 0..<index1 {
                 if copy[index2] > copy[index2 + 1] {
                     copy.swapAt(index2, index2 + 1)
+                    return copy
                 }
             }
         }
@@ -26,4 +27,22 @@ class BubbleModel: SortModelProtocol {
         print("BubbleModel")
     }
     
+    func fakeSort(_ array: [Int]) -> SortResult {
+        var copy = array
+        for index1 in (0..<copy.count).reversed() {
+            for index2 in 0..<index1 {
+                if copy[index2] > copy[index2 + 1] {
+                    copy.swapAt(index2, index2 + 1)
+                    return .result(index2, index2 + 1)
+                }
+            }
+        }
+        return .end
+    }
+    
+}
+
+enum SortResult {
+    case result(Int, Int)
+    case end
 }

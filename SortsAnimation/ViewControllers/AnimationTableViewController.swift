@@ -15,7 +15,8 @@ class AnimationTableViewController: UITableViewController {
     var isStartToSort = false {
         didSet {
             if isStartToSort {
-                unsortedArray = (self.sortModel?.sort(unsortedArray))!
+                guard let newArray = self.sortModel?.sort(unsortedArray) else { return }
+                unsortedArray = newArray
                 tableView.reloadData()
             }
         }
