@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F220B31120A04BA70067C705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B31020A04BA70067C705 /* AppDelegate.swift */; };
-		F220B31320A04BA70067C705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B31220A04BA70067C705 /* ViewController.swift */; };
+		F220B31320A04BA70067C705 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B31220A04BA70067C705 /* StartingViewController.swift */; };
 		F220B31620A04BA70067C705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F220B31420A04BA70067C705 /* Main.storyboard */; };
 		F220B31820A04BB20067C705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F220B31720A04BB20067C705 /* Assets.xcassets */; };
 		F220B31B20A04BB20067C705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F220B31920A04BB20067C705 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		F220B30D20A04BA70067C705 /* SortsAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortsAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F220B31020A04BA70067C705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F220B31220A04BA70067C705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F220B31220A04BA70067C705 /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
 		F220B31520A04BA70067C705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F220B31720A04BB20067C705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F220B31A20A04BB20067C705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		F220B30F20A04BA70067C705 /* SortsAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				F220B31220A04BA70067C705 /* ViewController.swift */,
+				F220B31220A04BA70067C705 /* StartingViewController.swift */,
 				F220B31420A04BA70067C705 /* Main.storyboard */,
 				F220B31C20A04BB20067C705 /* Info.plist */,
 				F220B32220A04BC30067C705 /* Supporting Files */,
@@ -143,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F220B31320A04BA70067C705 /* ViewController.swift in Sources */,
+				F220B31320A04BA70067C705 /* StartingViewController.swift in Sources */,
 				F220B31120A04BA70067C705 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
