@@ -36,6 +36,9 @@
                                         <state key="normal" title="Insert">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedTypeOfSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A1P-M8-3H7"/>
+                                        </connections>
                                     </button>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D9-oc-Bta">
                                         <rect key="frame" x="117" y="0.0" width="109" height="100"/>
@@ -44,6 +47,9 @@
                                         <state key="normal" title="Selection">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedTypeOfSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4S-Kv-i5d"/>
+                                        </connections>
                                     </button>
                                     <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baj-Vt-VCm">
                                         <rect key="frame" x="234" y="0.0" width="109" height="100"/>
@@ -52,6 +58,9 @@
                                         <state key="normal" title="Bubble">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedTypeOfSort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNA-v8-F10"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -83,7 +92,7 @@
         <!--Visualization View Controller-->
         <scene sceneID="i5u-rM-Fca">
             <objects>
-                <viewController id="0N6-Uw-cPf" customClass="VisualizationViewController" customModule="SortsAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VisualizationId" id="0N6-Uw-cPf" customClass="VisualizationViewController" customModule="SortsAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ztl-i9-48o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
