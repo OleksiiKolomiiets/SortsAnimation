@@ -17,7 +17,11 @@ class StartingViewController: UIViewController {
 
     @IBAction func tappedTypeOfSort(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let targetVC = storyboard.instantiateViewController(withIdentifier: "VisualizationId") as? VisualizationViewController else { return }
+        guard let targetVC = storyboard.instantiateViewController(withIdentifier: "VisualizationId") as? VisualizationViewController,
+            let label = sender.titleLabel,
+            let title = label.text?.lowercased(),
+            let sortType = SortType(rawValue: title) else { return }
+        targetVC.sortModel = sortType.model
         self.navigationController?.pushViewController(targetVC, animated: true)
     }
     
@@ -25,13 +29,5 @@ class StartingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let targetVC = segue.destination as? VisualizationViewController {
-//            
-//        }
-    }
-
 
 }
-

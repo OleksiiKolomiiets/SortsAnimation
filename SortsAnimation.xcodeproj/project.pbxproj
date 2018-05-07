@@ -14,6 +14,11 @@
 		F220B31B20A04BB20067C705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F220B31920A04BB20067C705 /* LaunchScreen.storyboard */; };
 		F220B32420A057860067C705 /* VisualizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32320A057860067C705 /* VisualizationViewController.swift */; };
 		F220B32620A057A10067C705 /* AnimationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32520A057A10067C705 /* AnimationTableViewController.swift */; };
+		F220B32920A075260067C705 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32820A075260067C705 /* SortType.swift */; };
+		F220B32B20A0876A0067C705 /* InsertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32A20A0876A0067C705 /* InsertModel.swift */; };
+		F220B32D20A087870067C705 /* BubleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32C20A087870067C705 /* BubleModel.swift */; };
+		F220B32F20A0879D0067C705 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32E20A0879D0067C705 /* SelectionModel.swift */; };
+		F220B33120A0888C0067C705 /* SortModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B33020A0888C0067C705 /* SortModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		F220B31C20A04BB20067C705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F220B32320A057860067C705 /* VisualizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewController.swift; sourceTree = "<group>"; };
 		F220B32520A057A10067C705 /* AnimationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTableViewController.swift; sourceTree = "<group>"; };
+		F220B32820A075260067C705 /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
+		F220B32A20A0876A0067C705 /* InsertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertModel.swift; sourceTree = "<group>"; };
+		F220B32C20A087870067C705 /* BubleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubleModel.swift; sourceTree = "<group>"; };
+		F220B32E20A0879D0067C705 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
+		F220B33020A0888C0067C705 /* SortModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				F220B32720A057A70067C705 /* ViewControllers */,
+				F220B33220A08AA10067C705 /* Models */,
 				F220B31420A04BA70067C705 /* Main.storyboard */,
 				F220B31C20A04BB20067C705 /* Info.plist */,
+				F220B32820A075260067C705 /* SortType.swift */,
+				F220B33020A0888C0067C705 /* SortModelProtocol.swift */,
 				F220B32220A04BC30067C705 /* Supporting Files */,
 			);
 			path = SortsAnimation;
@@ -84,6 +97,16 @@
 				F220B32520A057A10067C705 /* AnimationTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F220B33220A08AA10067C705 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F220B32A20A0876A0067C705 /* InsertModel.swift */,
+				F220B32C20A087870067C705 /* BubleModel.swift */,
+				F220B32E20A0879D0067C705 /* SelectionModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F220B32F20A0879D0067C705 /* SelectionModel.swift in Sources */,
+				F220B32B20A0876A0067C705 /* InsertModel.swift in Sources */,
 				F220B32620A057A10067C705 /* AnimationTableViewController.swift in Sources */,
+				F220B33120A0888C0067C705 /* SortModelProtocol.swift in Sources */,
 				F220B32420A057860067C705 /* VisualizationViewController.swift in Sources */,
 				F220B31320A04BA70067C705 /* StartingViewController.swift in Sources */,
+				F220B32920A075260067C705 /* SortType.swift in Sources */,
 				F220B31120A04BA70067C705 /* AppDelegate.swift in Sources */,
+				F220B32D20A087870067C705 /* BubleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
