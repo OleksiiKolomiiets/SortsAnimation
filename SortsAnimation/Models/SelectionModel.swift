@@ -39,8 +39,8 @@ class SelectionModel: SortModelProtocol {
                 
             }
             copy.swapAt(index1, minIndex)
-            return .swap(first: index1, sedond: minIndex, interiumResult: copy, highlight: [(index1, minIndex)])
+            return .swap(first: index1, second: minIndex, interiumResult: copy)
         }
-        return .end
+        return .end(highlight: [(1, 2)])
     }
 }

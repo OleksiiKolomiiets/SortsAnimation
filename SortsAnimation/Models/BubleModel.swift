@@ -25,15 +25,16 @@ class BubbleModel: SortModelProtocol {
     
     private var highlight = [(Int, Int)]()
     
-    func fakeSort(_ array: [Int]) -> SortResult {
+    func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult {
         var copy = array
         for index1 in (0..<copy.count).reversed() {
-            for index2 in 0..<index1 {
-                highlight.append((first: index2, sedond: index2 + 1))
+            for index2 in itterationStep..<index1 {
+                print("\(copy[index2]) > \(copy[index2 + 1])")
                 if copy[index2] > copy[index2 + 1] {
                     copy.swapAt(index2, index2 + 1)
-                    return .swap(first: index2, sedond: index2 + 1, interiumResult: copy, highlight: highlight)
-                }                
+                    return .swap(first: index2, second: index2 + 1, interiumResult: copy)
+                }
+                return .highlight(first: index2, second: index2 + 1, itterationStep: index2 + 1)
             }
         }
         return .end(highlight: highlight)
@@ -42,6 +43,7 @@ class BubbleModel: SortModelProtocol {
 }
 
 enum SortResult {
-    case swap(first: Int, sedond: Int, interiumResult: [Int], highlight: [(Int, Int)])
+    case swap(first: Int, second: Int, interiumResult: [Int])
+    case highlight(first: Int, second: Int, itterationStep: Int)
     case end(highlight: [(Int, Int)])
 }
