@@ -26,9 +26,12 @@ class SelectionModel: SortModelProtocol {
         return copy
     }
     
-    func fakeSort(_ array: [Int]) -> SortResult {
+    private var highlight = [(Int, Int)]()
+    
+    func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult {
         var copy = array
         var minIndex = 0
+        var sortedArray = sort(copy)
         
         for index1 in 0..<copy.count {
             minIndex = index1
@@ -36,7 +39,7 @@ class SelectionModel: SortModelProtocol {
                 if copy[minIndex] > copy[index2] {
                     minIndex = index2
                 }
-                
+                return .highlight(first: minIndex, second: index2, itterationStep: index2)
             }
             copy.swapAt(index1, minIndex)
             return .swap(first: index1, second: minIndex, interiumResult: copy)

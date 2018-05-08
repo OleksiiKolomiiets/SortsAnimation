@@ -9,5 +9,5 @@
 import Foundation
 
 protocol SortModelProtocol {
-    func sort(_ array: [Int]) -> [Int]
+    func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult
 }
