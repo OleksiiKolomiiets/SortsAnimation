@@ -10,6 +10,8 @@ import Foundation
 
 class BubbleModel: SortModelProtocol {
     
+    var title = "Bubble Sort"
+    
     func sort(_ array: [Int]) -> [Int] {
         var copy = array
         for index1 in (0..<copy.count).reversed() {

@@ -17,24 +17,22 @@ class AnimationTableViewController: UITableViewController {
     var isStartToSort = false {
         didSet {
             if isStartToSort {
-                tableView.beginUpdates()
-                UIView.animate(withDuration: 1.5) {
-                    guard let indexesForSwap = self.sortModel?.fakeSort(self.unsortedArray, itterationStep: self.itterationStep) else { return }
-                    switch indexesForSwap {
-                    case .swap(let at, let to, let array):
-                        self.itterationStep =  (at + 1 < self.unsortedArray.count - 1) ? at + 1 : 0
-                        self.unsortedArray = array
-                        self.highlightCells([(first: at, second: to)], with: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), animate: true)
-                        self.tableView.moveRow(at: IndexPath(row: at, section: self.numberOfSections), to: IndexPath(row: to, section: self.numberOfSections))
-                    case .end(let highlight):
-                        self.highlightCells(highlight, with: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), animate: false)
-                        break
-                    case .highlight(let first, let second, let itterationStep):
-                        self.itterationStep = (itterationStep < self.unsortedArray.count - 1) ? itterationStep : 0
-                        self.highlightCells([(first: first, second: second)], with: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), animate: true)
-                    }
+                guard let indexesForSwap = self.sortModel?.fakeSort(self.unsortedArray, itterationStep: self.itterationStep) else { return }
+                switch indexesForSwap {
+                case .swap(let at, let to, let array):
+                    itterationStep =  (at + 1 < unsortedArray.count - 1) ? at + 1 : 0
+                    unsortedArray = array
+                    tableView.beginUpdates()
+                    UIView.animate(withDuration: 1.5) { self.highlightCells([(first: at, second: to)], with: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), animate: true) }
+                    tableView.moveRow(at: IndexPath(row: at, section: self.numberOfSections), to: IndexPath(row: to, section: self.numberOfSections))
+                    tableView.endUpdates()
+                case .end(let highlight):
+                    UIView.animate(withDuration: 1.5) { self.highlightCells(highlight, with: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), animate: false) }
+                    break
+                case .highlight(let first, let second, let itterationStep):
+                    self.itterationStep = (itterationStep < unsortedArray.count - 1) ? itterationStep : 0
+                    UIView.animate(withDuration: 1.5) { self.highlightCells([(first: first, second: second)], with: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), animate: true) }
                 }
-                tableView.endUpdates()
                 isStartToSort = false
             }
         }

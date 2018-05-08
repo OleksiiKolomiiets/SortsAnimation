@@ -10,4 +10,6 @@ import Foundation
 
 protocol SortModelProtocol {
     func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult
+    
+    var title: String { get }
 }

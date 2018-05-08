@@ -17,8 +17,7 @@ enum SortType: String {
             return BubbleModel()
 //            return InsertModel()
         case .selection:
-            return BubbleModel()
-//            return SelectionModel()
+            return SelectionModel()
         case .bubble:
             return BubbleModel()
         }

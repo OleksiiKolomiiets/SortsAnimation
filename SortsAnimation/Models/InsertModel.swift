@@ -9,10 +9,11 @@
 import Foundation
 
 class InsertModel: SortModelProtocol {
+    var title = "Insert Sort"
+    
     func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult {
         return .end(highlight: [(1, 2)])
     }
-    
     
     func sort(_ array: [Int]) -> [Int] {
         guard array.count > 1 else { return array }

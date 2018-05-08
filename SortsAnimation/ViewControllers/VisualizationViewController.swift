@@ -20,6 +20,7 @@ class VisualizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animationViewController?.sortModel = sortModel
+        self.navigationItem.title = sortModel?.title
         // Do any additional setup after loading the view.
     }
 
