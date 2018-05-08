@@ -14,9 +14,11 @@ enum SortType: String {
     var model: SortModelProtocol {
         switch self {
         case .insert:
-            return InsertModel()
+            return BubbleModel()
+//            return InsertModel()
         case .selection:
-            return SelectionModel()
+            return BubbleModel()
+//            return SelectionModel()
         case .bubble:
             return BubbleModel()
         }

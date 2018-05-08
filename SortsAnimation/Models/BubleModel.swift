@@ -33,7 +33,7 @@ class BubbleModel: SortModelProtocol {
             for index2 in 0..<index1 {
                 if copy[index2] > copy[index2 + 1] {
                     copy.swapAt(index2, index2 + 1)
-                    return .result(index2, index2 + 1)
+                    return .result(index2, index2 + 1, copy)
                 }
             }
         }
@@ -43,6 +43,6 @@ class BubbleModel: SortModelProtocol {
 }
 
 enum SortResult {
-    case result(Int, Int)
+    case result(Int, Int, [Int])
     case end
 }

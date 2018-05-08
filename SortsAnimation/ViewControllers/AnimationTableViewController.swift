@@ -10,14 +10,30 @@ import UIKit
 
 class AnimationTableViewController: UITableViewController {
 
+    private let numberOfSections = 0
     var unsortedArray = [12, 8, 9, 23, 1]
     var sortModel: SortModelProtocol?
+    var fakeB = BubbleModel()
+    var fakeS = SelectionModel()
+    var fakeI = InsertModel()
     var isStartToSort = false {
         didSet {
             if isStartToSort {
-                guard let newArray = self.sortModel?.sort(unsortedArray) else { return }
-                unsortedArray = newArray
-                tableView.reloadData()
+//                guard let newArray = self.sortModel?.sort(unsortedArray) else { return }
+//                unsortedArray = newArray
+                let indexesForSwap = fakeB.fakeSort(unsortedArray)
+                print(unsortedArray)
+                switch indexesForSwap {
+                case .result(let at, let to, let array):
+                    tableView.beginUpdates()
+                    unsortedArray = array
+                    tableView.moveRow(at: IndexPath(row: at, section: numberOfSections), to: IndexPath(row: to, section: numberOfSections))
+                    tableView.endUpdates()
+                case .end:
+                    print("end")
+                    break
+                }
+                isStartToSort = false
             }
         }
     }
@@ -63,5 +79,7 @@ extension UITableViewCell {
         self.textLabel?.text = title
     }
 }
+
+
 
 
