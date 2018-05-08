@@ -23,26 +23,25 @@ class BubbleModel: SortModelProtocol {
         return copy
     }
     
-    init() {
-        print("BubbleModel")
-    }
+    private var highlight = [(Int, Int)]()
     
     func fakeSort(_ array: [Int]) -> SortResult {
         var copy = array
         for index1 in (0..<copy.count).reversed() {
             for index2 in 0..<index1 {
+                highlight.append((first: index2, sedond: index2 + 1))
                 if copy[index2] > copy[index2 + 1] {
                     copy.swapAt(index2, index2 + 1)
-                    return .result(index2, index2 + 1, copy)
-                }
+                    return .swap(first: index2, sedond: index2 + 1, interiumResult: copy, highlight: highlight)
+                }                
             }
         }
-        return .end
+        return .end(highlight: highlight)
     }
     
 }
 
 enum SortResult {
-    case result(Int, Int, [Int])
-    case end
+    case swap(first: Int, sedond: Int, interiumResult: [Int], highlight: [(Int, Int)])
+    case end(highlight: [(Int, Int)])
 }

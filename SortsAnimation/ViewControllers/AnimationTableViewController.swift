@@ -24,17 +24,35 @@ class AnimationTableViewController: UITableViewController {
                 let indexesForSwap = fakeB.fakeSort(unsortedArray)
                 print(unsortedArray)
                 switch indexesForSwap {
-                case .result(let at, let to, let array):
+                case .swap(let at, let to, let array, let highlight):
                     tableView.beginUpdates()
                     unsortedArray = array
-                    tableView.moveRow(at: IndexPath(row: at, section: numberOfSections), to: IndexPath(row: to, section: numberOfSections))
+                    UIView.animate(withDuration: 0.5) {
+                        self.highlightCells(highlight)
+                    }
+                    UIView.animate(withDuration: 0.5) {
+                        self.highlightCells([(first: at, second: to)])
+                        self.tableView.moveRow(at: IndexPath(row: at, section: self.numberOfSections), to: IndexPath(row: to, section: self.numberOfSections))
+                    }
                     tableView.endUpdates()
-                case .end:
-                    print("end")
+                case .end(let highlight):
+                    self.highlightCells(highlight)
                     break
                 }
                 isStartToSort = false
             }
+        }
+    }
+    
+    private func highlightCells(_ cellsColection: [(first: Int, second: Int)]) {
+        cellsColection.forEach { (at, to) in
+            let cellFirst = tableView.cellForRow(at: IndexPath(row: at, section: self.numberOfSections))
+            let cellSecond = tableView.cellForRow(at: IndexPath(row: to, section: self.numberOfSections))
+            cellFirst?.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+            cellSecond?.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+            
+            cellFirst?.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            cellSecond?.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         }
     }
     

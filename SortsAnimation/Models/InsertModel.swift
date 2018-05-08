@@ -30,9 +30,5 @@ class InsertModel: SortModelProtocol {
     func isOrderedBefore(_ a: Int, _ b: Int) -> Bool {
         return a < b
     }
-    
-    init() {
-        print("InsertModel")
-    }
 
 }
