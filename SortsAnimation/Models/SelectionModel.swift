@@ -10,73 +10,30 @@ import Foundation
 
 class SelectionModel: SortModelProtocol {
     
+    init() {
+        result = selectionSort(array)
+    }
+    var result = [(indexes: [Int], isSwap: Bool)]()
     var title = "Selection Sort"
-
-    func sort(_ array: [Int]) -> [Int] {
-        var copy = array
-        var minIndex = 0
-        
-        for index1 in 0..<copy.count {
-            minIndex = index1
-            for index2 in index1..<copy.count {
-                if copy[minIndex] > copy[index2] {
-                    minIndex = index2
+    var array = [4, 2, 3, 13, 1]
+    
+    private func selectionSort(_ array: [Int]) -> [(indexes: [Int], isSwap: Bool)] {
+        var result = [(indexes: [Int], isSwap: Bool)]()
+        var a = array
+        for x in 0 ..< a.count - 1 {
+            var lowest = x
+            for y in x + 1 ..< a.count {
+                result.append((indexes: [y, lowest], isSwap: false))
+                if a[y] < a[lowest] {
+                    lowest = y
+                    result.append((indexes: [y, lowest], isSwap: false))
                 }
             }
-            copy.swapAt(index1, minIndex)
-        }
-        return copy
-    }
-    
-    private var highlight = [(Int, Int)]()
-    
-    func fakeSort2(_ array: [Int], itterationStep: Int) -> SortResult {
-        var copy = array {
-            didSet {
-                
+            if x != lowest {
+                a.swapAt(x, lowest)
+                result.append((indexes: [x, lowest], isSwap: true))
             }
         }
-        var minIndex = 0
-        let sortedArray = sort(copy)
-        
-        for index1 in 0..<copy.count {
-            minIndex = index1
-            for index2 in index1..<copy.count {
-                highlight.append((minIndex, index2))
-                if copy[minIndex] > copy[index2 + 1] {
-                    minIndex = index2
-                    return .swap(first: index1, second: minIndex, interiumResult: copy)
-                }
-                return .highlight(first: index2, second: minIndex, itterationStep: index2 + 1)
-            }
-            copy.swapAt(index1, minIndex)
-            
-            if sortedArray.isEqual(copy) {
-                return .swap(first: index1, second: minIndex, interiumResult: copy)
-            } else {
-                return .end(highlight: [(1, 2)])
-            }
-        }
-        return .end(highlight: [(1, 2)])
-    }
-    
-    func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult {
-        var copy = array
-        var minIndex = 0
-        
-        for index1 in 0..<copy.count {
-            minIndex = index1
-            let index3 = index1 + 1
-            for index2 in index3..<copy.count {
-                if copy[minIndex] > copy[index2] {
-                    minIndex = index2
-                }
-            }
-            highlight.append((minIndex, index1))
-            copy.swapAt(index1, minIndex)
-            print(minIndex)
-            return .swap(first: index1, second: minIndex, interiumResult: copy)
-        }
-        return .end(highlight: highlight)
+        return result
     }
 }

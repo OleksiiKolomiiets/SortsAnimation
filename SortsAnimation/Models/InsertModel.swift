@@ -9,31 +9,28 @@
 import Foundation
 
 class InsertModel: SortModelProtocol {
+    
+    init() {
+        result = sort(array)
+    }
+    var result = [(indexes: [Int], isSwap: Bool)]()
+    var array = [4, 2, 3, 13, 1]
     var title = "Insert Sort"
     
-    func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult {
-        return .end(highlight: [(1, 2)])
-    }
-    
-    func sort(_ array: [Int]) -> [Int] {
-        guard array.count > 1 else { return array }
-        
+    private func sort(_ array: [Int]) -> [(indexes: [Int], isSwap: Bool)] {
+        var result = [(indexes: [Int], isSwap: Bool)]()
         var a = array
         for x in 1..<a.count {
             var y = x
-            let temp = a[y]
-            while y > 0 && isOrderedBefore(temp, a[y - 1]){
-                a[y] = a[y - 1]
-                y -= 1
+            while y > 0 && a[y] < a[y - 1] {
+                result.append((indexes: [y, y - 1], isSwap: false))
+                if a[y] < a[y - 1] {
+                    result.append((indexes: [y, y - 1], isSwap: true))
+                    a.swapAt(y - 1, y)
+                    y -= 1
+                }
             }
-            a[y] = temp
         }
-        print(a)
-        return a
+        return result
     }
-    
-    func isOrderedBefore(_ a: Int, _ b: Int) -> Bool {
-        return a < b
-    }
-
 }

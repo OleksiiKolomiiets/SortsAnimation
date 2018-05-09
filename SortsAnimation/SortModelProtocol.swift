@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol SortModelProtocol {
-    func fakeSort(_ array: [Int], itterationStep: Int) -> SortResult
-    
+protocol SortModelProtocol: class {
     var title: String { get }
+    var array: [Int] { get }
+    var result: [(indexes: [Int], isSwap: Bool)] { get set }
 }

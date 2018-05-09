@@ -19,6 +19,7 @@
 		F220B32D20A087870067C705 /* BubleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32C20A087870067C705 /* BubleModel.swift */; };
 		F220B32F20A0879D0067C705 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32E20A0879D0067C705 /* SelectionModel.swift */; };
 		F220B33120A0888C0067C705 /* SortModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B33020A0888C0067C705 /* SortModelProtocol.swift */; };
+		F24C0F1D20A37369007F9418 /* RandomArrayMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C0F1C20A37369007F9418 /* RandomArrayMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F220B32C20A087870067C705 /* BubleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubleModel.swift; sourceTree = "<group>"; };
 		F220B32E20A0879D0067C705 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 		F220B33020A0888C0067C705 /* SortModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModelProtocol.swift; sourceTree = "<group>"; };
+		F24C0F1C20A37369007F9418 /* RandomArrayMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArrayMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				F220B31C20A04BB20067C705 /* Info.plist */,
 				F220B32820A075260067C705 /* SortType.swift */,
 				F220B33020A0888C0067C705 /* SortModelProtocol.swift */,
+				F24C0F1C20A37369007F9418 /* RandomArrayMaker.swift */,
 				F220B32220A04BC30067C705 /* Supporting Files */,
 			);
 			path = SortsAnimation;
@@ -187,6 +190,7 @@
 				F220B32420A057860067C705 /* VisualizationViewController.swift in Sources */,
 				F220B31320A04BA70067C705 /* StartingViewController.swift in Sources */,
 				F220B32920A075260067C705 /* SortType.swift in Sources */,
+				F24C0F1D20A37369007F9418 /* RandomArrayMaker.swift in Sources */,
 				F220B31120A04BA70067C705 /* AppDelegate.swift in Sources */,
 				F220B32D20A087870067C705 /* BubleModel.swift in Sources */,
 			);
