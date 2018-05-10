@@ -13,12 +13,12 @@ class SelectionModel: SortModelProtocol {
     init() {
         result = selectionSort(array)
     }
-    var result = [(indexes: [Int], isSwap: Bool)]()
+    var result = [resultItem]()
     var title = "Selection Sort"
     var array = [4, 2, 3, 13, 1]
     
-    private func selectionSort(_ array: [Int]) -> [(indexes: [Int], isSwap: Bool)] {
-        var result = [(indexes: [Int], isSwap: Bool)]()
+    private func selectionSort(_ array: [Int]) -> [resultItem] {
+        var result = [resultItem]()
         var a = array
         for x in 0 ..< a.count - 1 {
             var lowest = x

@@ -13,12 +13,12 @@ class InsertModel: SortModelProtocol {
     init() {
         result = sort(array)
     }
-    var result = [(indexes: [Int], isSwap: Bool)]()
+    var result = [resultItem]()
     var array = [4, 2, 3, 13, 1]
     var title = "Insert Sort"
     
-    private func sort(_ array: [Int]) -> [(indexes: [Int], isSwap: Bool)] {
-        var result = [(indexes: [Int], isSwap: Bool)]()
+    private func sort(_ array: [Int]) -> [resultItem] {
+        var result = [resultItem]()
         var a = array
         for x in 1..<a.count {
             var y = x

@@ -11,5 +11,7 @@ import Foundation
 protocol SortModelProtocol: class {
     var title: String { get }
     var array: [Int] { get }
-    var result: [(indexes: [Int], isSwap: Bool)] { get set }
+    var result: [resultItem] { get set }
 }
+
+typealias resultItem = (indexes: [Int], isSwap: Bool)

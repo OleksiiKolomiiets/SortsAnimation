@@ -11,6 +11,7 @@ import UIKit
 class VisualizationViewController: UIViewController {
 
     var sortModel: SortModelProtocol?
+    var numberOfElementsInRandomArray: Int?
     var animationViewController: AnimationTableViewController?
     
     @IBAction func tappedNextButton(_ sender: UIButton) {

@@ -67,21 +67,65 @@
                                     <constraint firstAttribute="height" constant="100" id="XBs-Pt-gGx"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ae9-1j-2pI">
+                                <rect key="frame" x="100" y="298.5" width="175" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xx-98-Ugn">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectedNumberOfElementsInRandomArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXP-yt-bC5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GU-Tv-gM4">
+                                        <rect key="frame" x="61" y="0.0" width="53" height="44"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectedNumberOfElementsInRandomArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTZ-YU-vUh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUP-iw-1Ez">
+                                        <rect key="frame" x="122" y="0.0" width="53" height="44"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="10">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectedNumberOfElementsInRandomArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UlJ-JD-L9g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="q7N-eR-fgI" firstAttribute="top" secondItem="XMt-hU-1uW" secondAttribute="bottom" constant="25" id="1wL-Z3-BkB"/>
                             <constraint firstItem="XMt-hU-1uW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="71a-Kd-qdT"/>
                             <constraint firstItem="XMt-hU-1uW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Phl-Ru-v3h"/>
+                            <constraint firstItem="Ae9-1j-2pI" firstAttribute="top" secondItem="q7N-eR-fgI" secondAttribute="bottom" constant="50" id="QBL-ut-qTW"/>
                             <constraint firstItem="XMt-hU-1uW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TFV-Jd-khs"/>
                             <constraint firstItem="q7N-eR-fgI" firstAttribute="top" secondItem="XMt-hU-1uW" secondAttribute="bottom" constant="25" id="UwK-n8-iHR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q7N-eR-fgI" secondAttribute="trailing" constant="16" id="XJv-zQ-9ox"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ae9-1j-2pI" secondAttribute="trailing" constant="100" id="f50-Ho-FyS"/>
                             <constraint firstItem="q7N-eR-fgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iWQ-ea-6qt"/>
+                            <constraint firstItem="Ae9-1j-2pI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="yaH-IM-UK8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="tqw-l6-ftZ"/>
                     <connections>
+                        <outlet property="firstSelect" destination="7Xx-98-Ugn" id="ufA-dJ-EWt"/>
+                        <outlet property="secondSelect" destination="1GU-Tv-gM4" id="5SU-wh-JL0"/>
+                        <outlet property="thirdSelect" destination="BUP-iw-1Ez" id="aHQ-WJ-M90"/>
                         <segue destination="0N6-Uw-cPf" kind="show" identifier="SegueToVisualization" id="qPq-0e-Udz"/>
                     </connections>
                 </viewController>

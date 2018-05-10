@@ -12,12 +12,14 @@ class AnimationTableViewController: UITableViewController {
 
     private let numberOfSections = 0
     var unsortedArray: [Int] {
-        return sortModel!.array
+        guard let model = sortModel else { return [Int]() }
+        return model.array
     }
     var sortModel: SortModelProtocol?
     var element = 0
-    var result: [(indexes: [Int], isSwap: Bool)] {
-        return (sortModel?.result)!
+    var result: [resultItem] {
+        guard let resultArray = sortModel?.result else { return [resultItem]() }
+        return resultArray
     }
     var isSortedSuccess = false {
         didSet {
