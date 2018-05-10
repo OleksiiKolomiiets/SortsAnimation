@@ -10,7 +10,7 @@ import Foundation
 
 protocol SortModelProtocol: class {
     var title: String { get }
-    var array: [Int] { get }
+    var array: [Int] { get set }
     var result: [resultItem] { get set }
 }
 

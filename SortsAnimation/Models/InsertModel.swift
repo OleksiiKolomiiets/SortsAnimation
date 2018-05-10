@@ -14,7 +14,11 @@ class InsertModel: SortModelProtocol {
         result = sort(array)
     }
     var result = [resultItem]()
-    var array = [4, 2, 3, 13, 1]
+    var array = [4, 2, 3, 13, 1] {
+        didSet {
+            result = sort(array)
+        }
+    }
     var title = "Insert Sort"
     
     private func sort(_ array: [Int]) -> [resultItem] {

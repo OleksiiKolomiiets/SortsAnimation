@@ -17,7 +17,7 @@ class RandomArrayMaker {
         var generatedArray: [Int] = []
         
         for _ in 0..<capasity {
-            generatedArray.append(capasity.arc4random)
+            generatedArray.append(10 + capasity.arc4random)
         }
         return generatedArray
     }

@@ -15,7 +15,11 @@ class SelectionModel: SortModelProtocol {
     }
     var result = [resultItem]()
     var title = "Selection Sort"
-    var array = [4, 2, 3, 13, 1]
+    var array = [4, 2, 3, 13, 1]  {
+        didSet {
+            result = selectionSort(array)
+        }
+    }
     
     private func selectionSort(_ array: [Int]) -> [resultItem] {
         var result = [resultItem]()

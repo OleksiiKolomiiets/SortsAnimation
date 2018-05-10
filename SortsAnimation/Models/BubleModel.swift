@@ -14,7 +14,11 @@ class BubbleModel: SortModelProtocol {
         result = sort(array)
     }
     var result = [resultItem]()
-    var array = [4, 2, 3, 13, 1]
+    var array = [4, 2, 3, 13, 1] {
+        didSet {
+            result = sort(array)
+        }
+    }
     
     var title = "Bubble Sort"
     

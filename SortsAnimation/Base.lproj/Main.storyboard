@@ -74,7 +74,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="53" height="44"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="3">
+                                        <state key="normal" title="5">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -85,7 +85,7 @@
                                         <rect key="frame" x="61" y="0.0" width="53" height="44"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="5">
+                                        <state key="normal" title="10">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -96,7 +96,7 @@
                                         <rect key="frame" x="122" y="0.0" width="53" height="44"/>
                                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="0.6022335123" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="10">
+                                        <state key="normal" title="15">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -105,11 +105,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Array's capasity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iu-Z0-Bbb">
+                                <rect key="frame" x="30" y="358.5" width="315" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="q7N-eR-fgI" firstAttribute="top" secondItem="XMt-hU-1uW" secondAttribute="bottom" constant="25" id="1wL-Z3-BkB"/>
                             <constraint firstItem="XMt-hU-1uW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="71a-Kd-qdT"/>
+                            <constraint firstItem="6iu-Z0-Bbb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BIp-Ua-YgM"/>
+                            <constraint firstItem="6iu-Z0-Bbb" firstAttribute="top" secondItem="Ae9-1j-2pI" secondAttribute="bottom" constant="16" id="HJ4-BN-ni7"/>
                             <constraint firstItem="XMt-hU-1uW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Phl-Ru-v3h"/>
                             <constraint firstItem="Ae9-1j-2pI" firstAttribute="top" secondItem="q7N-eR-fgI" secondAttribute="bottom" constant="50" id="QBL-ut-qTW"/>
                             <constraint firstItem="XMt-hU-1uW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TFV-Jd-khs"/>
@@ -117,6 +125,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q7N-eR-fgI" secondAttribute="trailing" constant="16" id="XJv-zQ-9ox"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ae9-1j-2pI" secondAttribute="trailing" constant="100" id="f50-Ho-FyS"/>
                             <constraint firstItem="q7N-eR-fgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iWQ-ea-6qt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6iu-Z0-Bbb" secondAttribute="trailing" constant="30" id="uod-mC-ync"/>
                             <constraint firstItem="Ae9-1j-2pI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="yaH-IM-UK8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
