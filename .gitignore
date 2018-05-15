@@ -65,3 +65,41 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+.xcuserdata
+*.xcscheme
+*.xcsettings
+*.xcuserstate
+# OS X Finder
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+xcuserdata
+# Build products
+build/
+*.o
+*.LinkFileList
+*.hmap
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+# AppCode
+.idea/
+*.xccheckout
