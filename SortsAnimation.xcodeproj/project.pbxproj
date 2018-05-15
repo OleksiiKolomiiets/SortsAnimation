@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		F220B31120A04BA70067C705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B31020A04BA70067C705 /* AppDelegate.swift */; };
-		F220B31320A04BA70067C705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B31220A04BA70067C705 /* ViewController.swift */; };
+		F220B31320A04BA70067C705 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B31220A04BA70067C705 /* StartingViewController.swift */; };
 		F220B31620A04BA70067C705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F220B31420A04BA70067C705 /* Main.storyboard */; };
 		F220B31820A04BB20067C705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F220B31720A04BB20067C705 /* Assets.xcassets */; };
 		F220B31B20A04BB20067C705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F220B31920A04BB20067C705 /* LaunchScreen.storyboard */; };
+		F220B32420A057860067C705 /* VisualizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32320A057860067C705 /* VisualizationViewController.swift */; };
+		F220B32620A057A10067C705 /* AnimationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32520A057A10067C705 /* AnimationTableViewController.swift */; };
+		F220B32920A075260067C705 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32820A075260067C705 /* SortType.swift */; };
+		F220B32B20A0876A0067C705 /* InsertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32A20A0876A0067C705 /* InsertModel.swift */; };
+		F220B32D20A087870067C705 /* BubleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32C20A087870067C705 /* BubleModel.swift */; };
+		F220B32F20A0879D0067C705 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B32E20A0879D0067C705 /* SelectionModel.swift */; };
+		F220B33120A0888C0067C705 /* SortModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220B33020A0888C0067C705 /* SortModelProtocol.swift */; };
+		F24C0F1D20A37369007F9418 /* RandomArrayMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C0F1C20A37369007F9418 /* RandomArrayMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F220B30D20A04BA70067C705 /* SortsAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SortsAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F220B31020A04BA70067C705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F220B31220A04BA70067C705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F220B31220A04BA70067C705 /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
 		F220B31520A04BA70067C705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F220B31720A04BB20067C705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F220B31A20A04BB20067C705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F220B31C20A04BB20067C705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F220B32320A057860067C705 /* VisualizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewController.swift; sourceTree = "<group>"; };
+		F220B32520A057A10067C705 /* AnimationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTableViewController.swift; sourceTree = "<group>"; };
+		F220B32820A075260067C705 /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
+		F220B32A20A0876A0067C705 /* InsertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertModel.swift; sourceTree = "<group>"; };
+		F220B32C20A087870067C705 /* BubleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubleModel.swift; sourceTree = "<group>"; };
+		F220B32E20A0879D0067C705 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
+		F220B33020A0888C0067C705 /* SortModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModelProtocol.swift; sourceTree = "<group>"; };
+		F24C0F1C20A37369007F9418 /* RandomArrayMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArrayMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +70,13 @@
 		F220B30F20A04BA70067C705 /* SortsAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				F220B31220A04BA70067C705 /* ViewController.swift */,
+				F220B32720A057A70067C705 /* ViewControllers */,
+				F220B33220A08AA10067C705 /* Models */,
 				F220B31420A04BA70067C705 /* Main.storyboard */,
 				F220B31C20A04BB20067C705 /* Info.plist */,
+				F220B32820A075260067C705 /* SortType.swift */,
+				F220B33020A0888C0067C705 /* SortModelProtocol.swift */,
+				F24C0F1C20A37369007F9418 /* RandomArrayMaker.swift */,
 				F220B32220A04BC30067C705 /* Supporting Files */,
 			);
 			path = SortsAnimation;
@@ -70,6 +90,26 @@
 				F220B31920A04BB20067C705 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F220B32720A057A70067C705 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F220B31220A04BA70067C705 /* StartingViewController.swift */,
+				F220B32320A057860067C705 /* VisualizationViewController.swift */,
+				F220B32520A057A10067C705 /* AnimationTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F220B33220A08AA10067C705 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F220B32A20A0876A0067C705 /* InsertModel.swift */,
+				F220B32C20A087870067C705 /* BubleModel.swift */,
+				F220B32E20A0879D0067C705 /* SelectionModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F220B31320A04BA70067C705 /* ViewController.swift in Sources */,
+				F220B32F20A0879D0067C705 /* SelectionModel.swift in Sources */,
+				F220B32B20A0876A0067C705 /* InsertModel.swift in Sources */,
+				F220B32620A057A10067C705 /* AnimationTableViewController.swift in Sources */,
+				F220B33120A0888C0067C705 /* SortModelProtocol.swift in Sources */,
+				F220B32420A057860067C705 /* VisualizationViewController.swift in Sources */,
+				F220B31320A04BA70067C705 /* StartingViewController.swift in Sources */,
+				F220B32920A075260067C705 /* SortType.swift in Sources */,
+				F24C0F1D20A37369007F9418 /* RandomArrayMaker.swift in Sources */,
 				F220B31120A04BA70067C705 /* AppDelegate.swift in Sources */,
+				F220B32D20A087870067C705 /* BubleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
